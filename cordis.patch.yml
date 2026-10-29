@@ -1,0 +1,5 @@
+# dsh-theme-aurora bundle patch: 极光主题。纯浏览器侧呈现，无 Host 侧
+# 服务依赖；客户端半边依赖 ui-theme 服务（见 package.json dsh.client.inject）。
+- insert:
+    - id: theme-aurora
+      name: 'dsh-theme-aurora'

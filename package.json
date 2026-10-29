@@ -1,0 +1,33 @@
+{
+  "name": "dsh-theme-aurora",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./src/client/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "description": "Aurora theme plugin for the DeepSeek Harness Web UI: WebGL layered-curtain aurora background (star field, moon, snowy horizon) with polar-night glass panels, all shipped inside the client bundle (no server routes, no index.html injection). Enabled while installed (no toggle) — disable or remove the plugin to restore the default theme. Install into a web profile: dsh plugin --profile web add <path-to-this-package>"
+}
